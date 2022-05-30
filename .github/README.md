@@ -1,4 +1,4 @@
-# DenoLogic
+# LogicDino
 A logic libary for deno
 
 ## Example
