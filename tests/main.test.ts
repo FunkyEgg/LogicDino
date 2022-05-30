@@ -1,4 +1,4 @@
-import { and, not, or, bit, bits, hexbit, hexbits } from '../src/mod.ts';
+import { and, not, or, bit, bits, hexbit, hexbits, parseBit } from '../src/mod.ts';
 
 function xor(in1: bit, in2: bit): bit {
     if (or(in1, in2) === 1 && and(in1, in2) === 0) {
@@ -18,10 +18,10 @@ while (!exit) {
             break;
         }
         case 'xor': {
-            const in1 = parseInt(prompt('IN1 >', '0')!);
-            const in2 = parseInt(prompt('IN2 >', '0')!);
+            const in1 = parseBit(parseInt(prompt('IN1 >', '0')!));
+            const in2 = parseBit(parseInt(prompt('IN2 >', '0')!));
 
-            console.log(xor(in1, in2))
+            console.log(xor(in1, in2));
         }
     }
 }
